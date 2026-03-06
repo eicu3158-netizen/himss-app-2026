@@ -14,4 +14,5 @@ export default defineConfig({
   },
   // 強制指定根目錄位置
   root: './'
+
 })
