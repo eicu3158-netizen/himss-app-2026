@@ -1,0 +1,17 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// 針對所有檔案都在根目錄的結構進行優化設定
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    // 確保輸出目錄名稱正確
+    outDir: 'dist',
+    rollupOptions: {
+      // 明確指定入口文件為根目錄的 index.html
+      input: './index.html',
+    },
+  },
+  // 強制指定根目錄位置
+  root: './'
+})
